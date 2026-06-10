@@ -115,8 +115,10 @@ class MainActivity : AppCompatActivity(), SerialInputOutputManager.Listener {
         val device = driver.device
 
         if (!usbManager.hasPermission(device)) {
+            // Android 14+ (targetSdk 34) บังคับว่า mutable PendingIntent ต้องเป็น explicit intent
+            // (ระบุ package) ไม่งั้น throw ตั้งแต่ตอนสร้าง — เป็น pattern ตาม README ของ usb-serial-for-android
             val permissionIntent = PendingIntent.getBroadcast(
-                this, 0, Intent(ACTION_USB_PERMISSION), 
+                this, 0, Intent(ACTION_USB_PERMISSION).setPackage(packageName),
                 PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
             )
             usbManager.requestPermission(device, permissionIntent)
