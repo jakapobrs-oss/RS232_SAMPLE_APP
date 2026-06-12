@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven { url = uri("https://jitpack.io") }
     }
 }
-rootProject.name = "LG_RS232_Controller"
+rootProject.name = "RS232_SAMPLE_APP"
 include(":app")
