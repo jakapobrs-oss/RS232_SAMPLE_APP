@@ -1,6 +1,7 @@
-# RS232_SAMPLE_APP — LG TV RS232 Controller (Android / WebView)
+# RS232_SAMPLE_APP — RS232 TV Controller (Android / WebView)
 
-แอป **Android** สำหรับสั่งงานทีวี LG ผ่านสาย RS232 (USB-to-RS232 + OTG)
+แอป **Android** (sample) สำหรับสั่งงานทีวีผ่านสาย RS232 (USB-to-RS232 + OTG)
+**แบรนด์อ้างอิงตัวแรกคือ LG** (โปรโตคอลในหน้าเว็บ + `tools/Test-LgTv.ps1`) — แบรนด์อื่นทยอยเพิ่มทีหลัง
 สถาปัตยกรรมแบบ **WebView**: เปลือกเป็น Kotlin native ที่เปิด WebView โหลดหน้าเว็บ UI
 ที่ฝังมาในแอป แล้วเปิด **USB-serial** ให้หน้าเว็บยิงคำสั่งออกพอร์ตได้
 
@@ -10,7 +11,7 @@
 
 ```
 app/src/main/
-├── java/com/lgtv/rs232/MainActivity.kt   ← เปลือก native: WebView + bridge USB-serial
+├── java/com/rs232sample/app/MainActivity.kt  ← เปลือก native: WebView + bridge USB-serial
 └── assets/www/                           ← 🔁 หน้าเว็บ UI (สำเนาจาก RS232_SAMPLE_WEB)
     ├── index.html  app.js  styles.css
     ├── serial-web-shim.js                ← no-op บน Android (native bridge ชนะ)

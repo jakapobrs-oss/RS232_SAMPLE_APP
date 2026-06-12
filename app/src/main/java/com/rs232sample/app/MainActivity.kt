@@ -1,4 +1,4 @@
-package com.lgtv.rs232
+package com.rs232sample.app
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), SerialInputOutputManager.Listener {
     private var currentBaudRate: Int = 9600
 
     companion object {
-        private const val ACTION_USB_PERMISSION = "com.lgtv.rs232.USB_PERMISSION"
+        private const val ACTION_USB_PERMISSION = "com.rs232sample.app.USB_PERMISSION"
     }
 
     @SuppressLint("SetJavaScriptEnabled")

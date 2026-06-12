@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.lgtv.rs232"
+    namespace = "com.rs232sample.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.lgtv.rs232"
+        applicationId = "com.rs232sample.app"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
