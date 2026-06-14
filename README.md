@@ -1,7 +1,7 @@
 # RS232_SAMPLE_APP — RS232 TV Controller (Android / WebView)
 
 แอป **Android** (sample) สำหรับสั่งงานทีวีผ่านสาย RS232 (USB-to-RS232 + OTG)
-**แบรนด์อ้างอิงตัวแรกคือ LG** (โปรโตคอลในหน้าเว็บ + `tools/Test-LgTv.ps1`) — แบรนด์อื่นทยอยเพิ่มทีหลัง
+**แบรนด์อ้างอิงตัวแรกคือ LG** (โปรโตคอลในหน้าเว็บ + `command/Test-LgTv.ps1`) — แบรนด์อื่นทยอยเพิ่มทีหลัง
 สถาปัตยกรรมแบบ **WebView**: เปลือกเป็น Kotlin native ที่เปิด WebView โหลดหน้าเว็บ UI
 ที่ฝังมาในแอป แล้วเปิด **USB-serial** ให้หน้าเว็บยิงคำสั่งออกพอร์ตได้
 
@@ -16,7 +16,7 @@ app/src/main/
     ├── index.html  app.js  styles.css
     ├── serial-web-shim.js                ← no-op บน Android (native bridge ชนะ)
     └── lib/fontawesome/
-tools/                                    ← สคริปต์เทสโปรโตคอลเฟส 1 (ดู tools/README.md)
+command/                                    ← สคริปต์เทสโปรโตคอลเฟส 1 (ดู command/README.md)
 ```
 
 ### สะพานเชื่อม web ↔ native (contract เดียวกับฝั่งเว็บ)
@@ -39,7 +39,7 @@ tools/                                    ← สคริปต์เทสโ�
 3. เสียบมือถือ/กล่อง Android (เปิด USB debugging) → กด **Run ▶** หรือ `.\gradlew installDebug`
 4. ต่อทีวี: **OTG → USB-to-RS232 → ช่อง RS-232C ของ TV** → เปิดแอป กด Connect (แอปจะขอสิทธิ์ USB)
 
-> ทดสอบฮาร์ดแวร์/โปรโตคอลก่อนโดยไม่ต้องมีแอป: ใช้สคริปต์ใน `tools/` (เช่น `tools/Test-LgTv.ps1`)
+> ทดสอบฮาร์ดแวร์/โปรโตคอลก่อนโดยไม่ต้องมีแอป: ใช้สคริปต์ใน `command/` (เช่น `command/Test-LgTv.ps1`)
 
 ## หมายเหตุ
 
